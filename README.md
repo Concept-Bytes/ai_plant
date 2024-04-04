@@ -15,7 +15,7 @@ Before you begin, ensure you have the following:
 
    Open a terminal on your Raspberry Pi and run the following command to clone the repository:
 
-   git clone https://github.com/Concept-Bytes/ai_plant.git
+   ```git clone https://github.com/Concept-Bytes/ai_plant.git```
 
    Navigate into the project directory:
 
