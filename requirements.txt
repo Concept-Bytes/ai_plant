@@ -1,0 +1,8 @@
+SpeechRecognition
+torch
+tqdm
+tiktoken
+numba
+pyaudio
+openai
+adafruit-circuitpython-neopixel-spi
