@@ -5,4 +5,6 @@ tiktoken
 numba
 pyaudio
 openai
+neo
+adafruit-circuitpython-seesaw
 adafruit-circuitpython-neopixel-spi
