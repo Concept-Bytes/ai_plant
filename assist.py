@@ -10,21 +10,26 @@
 
 from openai import OpenAI
 import time
+from dotenv import load_dotenv
 from pathlib import Path
 from pygame import mixer  # Load the popular external library
-import time
 import speech_recognition as sr
 import re
+import os
 
 tts_enabled = True
 
-# Initialize the client
-client = OpenAI(api_key="INSERT YOUR OPEN AI API_KEY")
+load_dotenv()  # Load environment variables from .env file
+
+# Initialize the client with environment variables
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 mixer.init()
-# Retrieve the assistant
-assistant = client.beta.assistants.retrieve("INSERT YOUR ASSISTANT ID")
-#create empty thread
-plant_thread = "INSERT YOUR CHAT THREAD ID"
+
+# Retrieve the assistant using environment variable
+assistant = client.beta.assistants.retrieve(os.getenv('ASSISTANT_ID'))
+
+# Create and retrieve the thread using environment variable
+plant_thread = os.getenv('CHAT_THREAD_ID')
 thread = client.beta.threads.retrieve(plant_thread)
 
 def ask_question(question):

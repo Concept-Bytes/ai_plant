@@ -6,3 +6,4 @@ numba
 pyaudio
 openai
 adafruit-circuitpython-neopixel-spi
+dotenv
